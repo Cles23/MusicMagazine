@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.content {
+    margin-top: 100px;
+}
+/*-------MAIN CONTENT PAGE-------*/
+/*------BANNER-------*/
+.first_part img {
+    width: 100px;
+}
+.billboard_image {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.billboard_image h1 {
+    font-family: bicyclette, sans-serif;
+    font-size: min(9vw, 150px);
+    color: white;
+}
+#b_img {
+    width: min(20vw, 300px);
+}
+/*------END OF BANNER-------*/
+/*VIDEO*/
+.video h1{
+    font-family: bicyclette, sans-serif;
+    font-size: min(5vw, 40px);
+    margin-bottom: 30px;
+    color: white;
+}
+.video_wrapper{
+    aspect-ratio: 16/9;
+    width: min(100%, 720px);
+}
+.video{
+    background-color: black;
+    padding: 2%;
+}
+/*END OF VIDEO*/
+/*------CHART-----*/
+.container {
+    background-color: #F6F6F6;
+    text-align: center;
+}
+.video img {
+    width: 600px;
+    height: 338px ;
+}
+/*SONG CARDS*/
+.songs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 5% 10vw 10vw;
+}
+.top{
+    font-family: bicyclette, sans-serif;
+    position: relative;
+    background-color: white;
+    width: available;
+    border-radius: 20px;
+}
+.first_part {
+    display: flex;
+    padding: 5%;
+    justify-content: flex-start;
+    text-align: left;
+    cursor: pointer;
+}
+.first_part:hover .info h2{
+    color: #D62828;
+    transition: 0.2s ease;
+}
+.first_part img {
+    width: 120px;
+}
+.info{
+    padding-left: 5%;
+}
+.second_part{
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    background-color: black;
+    color: white;
+    border-bottom-left-radius: 20px;
+}
+.week{
+    padding: 0 5%;
+    border-right: 2px solid white;
+}
+#no_border{
+    border: none;
+}
+/*END OF SONG CARDS*/
+/*------END OF CHART-----*/
+/*-------END OF MAIN CONTENT PAGE-------*/
+@media (max-width: 1400px) {
+    .songs{
+        display: inline-block;
+    }
+    .top{
+        margin-bottom: 50px;
+    }
+    .top img{
+        width: min(40vw,180px);
+    }
+}

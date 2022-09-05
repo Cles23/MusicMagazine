@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.content{
+    margin-top: 100px;
+}
+/*-------MAIN CONTENT-----*/
+.main_content{
+    text-align: center;
+    margin: 0 10%;
+    background-color: #F6F6F6;
+}
+.banner img{
+    width: 100%;
+}
+.new_shows{
+    padding-top: 2%;
+}
+.new_shows h1{
+    font-family: bicyclette, sans-serif;
+    font-size: 3rem;
+}
+.new_shows p {
+    font-family: bicyclette, sans-serif;
+    font-size: 1rem;
+}
+.shows {
+    padding-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*----EVENT CARDS STYLE-----*/
+.event_card{
+    margin: 5%;
+    position: relative;
+    cursor: pointer;
+}
+.event_card_img{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.event_card_img img {
+    width: 100%;
+    transition: transform 0.3s;
+}
+.event_card_img h5{
+    font-family: bicyclette, sans-serif;
+    font-weight: bolder;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.shade {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.24);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.event_card_info{
+    padding: 2% 2% 5%;
+    background-color: white;
+    width: 250px;
+    font-family: bicyclette, sans-serif;
+}
+.event_card_info h6{
+    font-size: 15px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.buy_tickets{
+    border: none;
+    width: 100%;
+    padding: 5%;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.event_card:hover .buy_tickets{
+    background-color: darkorange;
+    transition: ease-in-out 0.2s;
+}
+/*ZOOM EFFECT*/
+.event_card:hover .event_card_img img{
+    transform: scale(1.1);
+}
+/*----EVENT CARDS STYLE-----*/
+/*-------END OF MAIN CONTENT-----*/

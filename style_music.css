@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.content {
+    margin-top: 100px;
+}
+/*--------CONTENT PAGE-------*/
+/*-------MAIN CONTENT PAGE-------*/
+.main_content img {
+    width: 80px;
+}
+.top_music_content img{
+    width: min(22vw, 350px);
+}
+.main_content {
+    background-color: #F6F6F6;
+}
+.top_music {
+    padding: 2% 5% 5%;
+    text-align: center;
+}
+.top_music h1 {
+    padding: 0 5% 3%;
+    font-family: monarcha, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4rem;
+    color: #003049;
+}
+.top_music p{
+    margin-right: 25%;
+    margin-left: 25%;
+    font-family: bicyclette, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+.top_music_content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10% 0;
+}
+.main_content h2{
+    font-family: bicyclette, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: .8rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: red;
+}
+.top_hero{
+    padding: 5%;
+    padding-left: 0;
+}
+.hero_name{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+}
+.hero_title{
+    margin-right: 10%;
+    margin-left: 10%;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    margin-bottom: 8%;
+}
+.review_block ul li {
+    font-size: .8rem;
+}
+.review_block p {
+    color: darkgrey;
+    margin-top: 2%;
+    font-size: .9rem;
+    font-weight: bold;
+}
+.review_block:hover .hero_title{
+    color: red;
+    transition: 0.2s ease;
+}
+/*---END MAIN CONTENT-----*/
+/*-----SECOND CONTENT-----*/
+.second_content{
+    background-color: #003049;
+}
+#vinyl{
+    width: 80px;
+    margin-top: 10px;
+}
+.catalog_music img{
+    width: 9rem;
+}
+.catalog_music {
+    padding: 3% 5% 5%;
+    text-align: center;
+}
+.catalog_music h1 {
+    padding: 2% 5% 3%;
+    font-family: monarcha, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.3rem;
+    color: #EAE2B7;
+}
+.second_content h4{
+    font-family: bicyclette, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    color: #D62828;
+    margin-bottom: 5%;
+}
+.best_albums{
+   margin-bottom: 10%;
+}
+.best_tracks{
+    padding-bottom: 3%;
+}
+.best_hero{
+    padding-left: 2%;
+}
+.albums, .tracks{
+    display: flex;
+    justify-content: space-between;
+    margin: 2vw;
+
+}
+.artist_name{
+    color: #ccd9e0;
+    padding: 2%;
+}
+.artist_title{
+    color: #658ea3;
+    padding: 2%;
+}
+.best_hero:hover .artist_title{
+    color: white;
+    transition: 0.2s ease;
+}
+.catalog_music ul li{
+    font-size: 0.8rem;
+    padding-top: 2%;
+}
+/*---END SECOND CONTENT-----*/
+/*------MOBILE------*/
+@media (max-width: 1150px){
+    /*--------CONTENT PAGE-------*/
+    .top_music p{
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    /*--------END OF CONTENT PAGE-------*/
+    /*-----SECOND CONTENT-----*/
+    .catalog_music img{
+        width: 15rem;
+    }
+    .albums, .tracks{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .best_hero{
+        padding-right: 2%;
+        padding-left: 2%;
+        padding-bottom: 10%;
+    }
+    /*---END SECOND CONTENT-----*/
+}
+@media (max-width: 768px){
+    /*--------CONTENT PAGE-------*/
+    .top_music_content img{
+        width: min(82vw, 450px);
+    }
+    .top_music_content{
+        display: inline-block;
+    }
+    .top_music_content{;
+        margin: 0;
+    }
+    /*--------END OF CONTENT PAGE-------*/
+}

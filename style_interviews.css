@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.content{
+    margin-top: 100px;
+}
+/*MAIN CONTENT*/
+.main_content{
+    text-align: center;
+    background-color: #F6F6F6;
+    padding-bottom: 5%;
+}
+.main_content h1{
+    font-family: bicyclette, sans-serif;
+    font-size: 3rem;
+    padding: 2% 2% 0;
+}
+.first_banner{
+    background-color: white;
+    display: flex;
+    margin: 2% 5% 0;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.front_image{
+    width: available;
+    justify-content: center;
+    overflow: hidden;
+}
+.first_banner img{
+    width: 100%;
+    transition: transform 0.3s;
+
+}
+.first_banner:hover .front_image img{
+    transform: scale(1.1);
+}
+.info{
+    font-family: bicyclette, sans-serif;
+    text-align: left;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.info h2{
+    font-size: 2rem;
+}
+.info p{
+    font-weight: lighter;
+}
+/*END OF MAIN CONTENT*/
+/*-----ARTICLES SECTION--------*/
+h5 {
+    font-family: bicyclette, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    color: black;
+    padding-bottom: 3vw;
+}
+.article_content{
+    width: 100%;
+    padding: 0 5% 5%;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+.latest_articles img{
+    width: 27vw;
+    padding-bottom: 5%;
+}
+.articles_row{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3%;
+}
+.articles{
+    margin: 2%;
+    padding-bottom: 2%;
+    background-color: white;
+    cursor: pointer;
+}
+.articles a{
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+@media (max-width: 1050px){
+    .first_banner{
+        display: inline-block;
+        padding: 0;
+    }
+    .first_banner img{
+        width: 100%;
+    }
+    .info{
+        text-align: center;
+        padding: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    /*-----NEWS SECTION-----*/
+    .articles_row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .articles {
+        display: grid;
+    }
+
+    .latest_articles img {
+        width: 72vw;
+    }
+}
+/*-----END OF NEWS SECTION-----*/

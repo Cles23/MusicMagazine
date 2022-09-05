@@ -1,0 +1,310 @@
+/*--------NAV BAR STYLE-------*/
+/*Change the links text style*/
+li, a, button{
+    font-family: bicyclette, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+}
+/*Customize navbar*/
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    min-height: 70px;
+    justify-content: space-between;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: all 300ms ease-in-out;
+}
+/*Logo size*/
+.logo {
+    height: auto;
+    width: 250px;
+    cursor: pointer;
+}
+/*links style while keeping it centered*/
+.nav__links ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__links li {
+    list-style: none;
+    padding: 0 2vw;
+    position: relative;
+}
+/*Contact buttons*/
+.long_button{
+    padding: 8px 23px;
+    color: white;
+    background: rgba(0,0,0,1);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.long_button:hover{
+    background-color: darkorange;
+}
+/*--------------------------------------*/
+/*---CREATE UNDERLINE EFFECT---*/
+.nav__links li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: .10rem;
+    bottom: -5px;
+    left: 0;
+    background-color: #000000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.nav__links li :hover::before {
+    transform: scaleX(0.6);
+}
+/*--------------------------*/
+/*MOBILE MENU BUTTON*/
+.toggle-button {
+    display: none;
+    cursor: pointer;
+    padding-left: 2rem;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+/*-----SCROLL STUFF----*/
+.scroll-down .navbar{
+    transform: translate3d(0, -100%, 0);
+}
+.scroll-up .navbar{
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+}
+/*Responsiveness depending on screen size*/
+/*smooth navbar when changing size*/
+@media (max-width: 920px) {
+    .navbar{
+        transition: all 0.3s ease-in-out;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .nav__links li{
+        padding: 0 1vw;
+    }
+
+}
+/*Show mobile Navbar with hamburger menu*/
+@media (max-width: 768px) {
+    /*NAVBAR*/
+    .scroll-down .navbar{
+        transform: translate3d(0, 0, 0);
+    }
+    .scroll-up .navbar{
+        filter: drop-shadow(0 0 0px);
+    }
+    .navbar{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .toggle-button{
+        display: block;
+    }
+    .toggle-button.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .toggle-button.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .toggle-button.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav__links ul{
+        background-color: white;
+        position: fixed;
+        right: -100%;
+        top: 100px;
+        padding: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .contact_button{
+        background-color: white;
+        position: fixed;
+        flex-direction: column;
+        top: 500px;
+        padding-top: 66px;
+        padding-bottom: 46px;
+        text-align: center;
+        right: -100%;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .nav__links li{
+        margin: 46px 0;
+    }
+    .nav__links ul.active{
+        right: 0;
+    }
+    .contact_button.active{
+        right: 0;
+    }
+    .nav__links li :hover::before {
+        transform: scaleX(0);
+    }
+    /*---CREATE FADE EFFECT WHEN HOVER OVER---*/
+    .nav__links li a {
+        transition: all 0.3s ease-in-out;
+    }
+    .nav__links li a:hover {
+        color: #d68100 ;
+        transition: all 0.3s ease 0s;
+    }
+    .nav__links .underline::before {
+        transform: scaleX(0);
+    }
+    /*    END OF NAVBAR*/
+}
+/*--------END OF NAV BAR STYLE-------*/
+/*--------FOOTER STYLE-----------*/
+.logo_mobile{
+    height: auto;
+    width: 150px;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: #F6F6F6;
+}
+.footer_container{
+    justify-content: space-between;
+    width: 100%;
+    padding: 5%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer_col{
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+.footer_col h4, .footer_col_form h4{
+    font-family: bicyclette, sans-serif;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.footer_col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer_col ul li a{
+    font-weight: 200;
+    font-size: 18px;
+}
+.footer_col_form h3{
+    font-family: bicyclette, sans-serif;
+    font-size: 19px;
+    font-weight: lighter;
+    font-style: normal;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.social_links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 25px;
+}
+.social_links a:hover{
+    color: darkorange;
+}
+.form_box{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.form_box button{
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 10px 60px;
+    font-size: 20px;
+}
+.form_box button:hover{
+    background-color: darkorange;
+    transition: all 0.3s ease 0s;
+}
+.form_box #email{
+    font-family: bicyclette, sans-serif;
+    font-size: large;
+    padding: 12px 100px 12px 20px;
+    border: 2px solid black;
+    border-radius: 0;
+    text-align: left;
+}
+.footer_copyright{
+    width: 100%;
+    padding: 50px 50px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: bicyclette, sans-serif;
+    font-size: large;
+}
+@media screen and (max-width: 1350px) {
+    .form_box #email{
+        padding: 12px 35vw 12px 20px;
+    }
+}
+/*------MOBILE------*/
+@media screen and (max-width: 768px){
+    #footer_image{
+        display: none;
+    }
+    .footer_container{
+        margin: auto;
+    }
+    .row{
+        display: inline-block;
+        text-align: center;
+    }
+
+    .footer_col{
+        padding-bottom: 50px;
+    }
+    .form_box{
+        display: inline-block;
+    }
+    .form_box #email{
+        margin-bottom: 10px;
+        width: 90%;
+        /*padding: 12px 10.2rem 12px 20px;*/
+    }
+    .form_box button{
+        padding: 13px 25%;
+    }
+
+}
+/*--------END OF FOOTER STYLE-----------*/
